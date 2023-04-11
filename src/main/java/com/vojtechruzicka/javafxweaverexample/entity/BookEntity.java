@@ -13,9 +13,9 @@ public class BookEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private long id;
-    private String title;
+    private String bookname;
     private String author;
-    private String pub;
+    private String publisher;
     private String year;
     private String kind;
 }

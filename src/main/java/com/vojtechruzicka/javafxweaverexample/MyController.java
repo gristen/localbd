@@ -90,9 +90,9 @@ public class MyController {
     void onSave(ActionEvent event) {
         if (!(tableColumn_title.equals("")) && !tableColumn_author.equals("")){
             BookEntity book = new BookEntity();
-            book.setTitle(tableColumn_title.getText());
+            book.setBookname(tableColumn_title.getText());
             book.setAuthor(tableColumn_author.getText());
-            book.setPub(tableColumn_pub.getText());
+            book.setPublisher(tableColumn_pub.getText());
             book.setYear(tableColumn_year.getText());
             book.setKind(tableColumn_kind.getText());
 
@@ -209,9 +209,9 @@ public class MyController {
 
     private void showBookEntityDetails(BookEntity bookEntity) {
         if (bookEntity != null){
-            tableColumn_title.setText(bookEntity.getTitle());
+            tableColumn_title.setText(bookEntity.getBookname());
             tableColumn_author.setText(bookEntity.getAuthor());
-            tableColumn_pub.setText(bookEntity.getPub());
+            tableColumn_pub.setText(bookEntity.getPublisher());
             tableColumn_year.setText(bookEntity.getYear());
             tableColumn_kind.setText(bookEntity.getKind());
         } else {
